@@ -12,8 +12,12 @@ app.get("/", (req,res) =>{
     res.sendFile(__dirname+"/index.html")
 });
 
-app.get("/uploadfiles", (req, res) => {
-    res.sendFile(__dirname+"/form.html")
+app.get("/form", (req, res) => {
+    res.sendFile(__dirname+"/form/form.html")
+})
+
+app.get("/search", (req, res) => {
+    res.sendFile(__dirname+"/form/search/form.html")
 })
 
 app.listen(3000, () =>{
