@@ -12,18 +12,18 @@
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Upload Your Resume</h4>
 
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" action="/form" method="post" novalidate>
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">First name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+            <input type="text" class="form-control" name="fName" id="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Last name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+            <input type="text" class="form-control" name="lName" id="lastName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
             </div>
@@ -35,7 +35,7 @@
           <div class="input-group">
 
             <input type="text" class="form-control" id="linkedIn" placeholder="linkedIn" required>
-            <div class="invalid-feedback" style="width: 100%;">
+            <div class="invalid-feedback" name="linkedIn"  style="width: 100%;">
               Your LinkedIn Profile required.
             </div>
           </div>
@@ -43,7 +43,7 @@
 
         <div class="mb-3">
           <label for="email">Email <span class="text-muted">*</span></label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          <input type="email" class="form-control" name="email"  id="email" placeholder="you@example.com">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -51,7 +51,7 @@
 
         <div class="mb-3">
           <label for="address">Address</label>
-          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+          <input type="text" class="form-control" name="adress" id="address" placeholder="1234 Main St" required>
           <div class="invalid-feedback">
             Please enter your shipping address.
           </div>
@@ -59,7 +59,7 @@
 
         <div class="mb-3">
           <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-          <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+          <input type="text" class="form-control" name="adress2" id="address2" placeholder="Apartment or suite">
         </div>
 
 
@@ -70,15 +70,15 @@
 
         <div class="d-block my-3">
           <div class="custom-control custom-radio">
-            <input id="Exempted" name="military-status" type="radio" class="custom-control-input" checked required>
+            <input id="Exempted" name="militaryStatus" type="radio" class="custom-control-input" checked required>
             <label class="custom-control-label" for="Exempted">Exempted</label>
           </div>
           <div class="custom-control custom-radio">
-            <input id="postponed" name="military-status" type="radio" class="custom-control-input" required>
+            <input id="postponed" name="militaryStatus" type="radio" class="custom-control-input" required>
             <label class="custom-control-label" for="postponed">postponed</label>
           </div>
           <div class="custom-control custom-radio">
-            <input id="done" name="military-status" type="radio" class="custom-control-input" required>
+            <input id="done" name="militaryStatus" type="radio" class="custom-control-input" required>
             <label class="custom-control-label" for="done">Done</label>
           </div>
         </div>
@@ -87,22 +87,22 @@
         </div>
 
         <div style="padding-bottom: 18px;">Position you are applying for<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="data_9" style="max-width : 450px;" class="form-control"/>
+          <input type="text" id="data_9" name="position" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Major<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="data_9" style="max-width : 450px;" class="form-control"/>
+          <input type="text" id="data_9" name="major" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Type of degree<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="data_9" style="max-width : 450px;" class="form-control"/>
+          <input type="text" id="data_9" name="degree" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Years of experience in the field<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="data_9" style="max-width : 450px;" class="form-control"/>
+          <input type="text" id="data_9" name="experience" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Skills<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="data_9" style="max-width : 450px;" class="form-control"/>
+          <input type="text" id="data_9" name="skills" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Languages<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="data_9" style="max-width : 450px;" class="form-control"/>
+          <input type="text" id="data_9" name="languages" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Resume upload<br/>
           <input id="data_10" name="data_10" style="max-width : 450px;" type="file" class="form-control"/>
