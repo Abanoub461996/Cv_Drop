@@ -17,7 +17,7 @@ app.get("/form", (req, res) => {
 })
 
 app.get("/search", (req, res) => {
-    res.sendFile(__dirname+"/form/search/form.html")
+    res.sendFile(__dirname+"/form/search/search.html")
 })
 
 app.listen(3000, () =>{
