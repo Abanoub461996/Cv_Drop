@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Form</title>
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Upload Your Resume</h4>
+<div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Upload Your Resume</h4>
 
       <form class="needs-validation" action="/form" method="post" novalidate>
         <div class="row">
@@ -31,10 +32,10 @@
         </div>
 
         <div class="mb-3">
-          <label for="linkedIn">Linked In Profile</label>
+          <label for="linkedIn">LinkedIn Profile</label>
           <div class="input-group">
 
-            <input type="text" class="form-control" id="linkedIn" placeholder="linkedIn" required>
+            <input type="text" class="form-control" name="linkedIn" id="linkedIn" placeholder="linkedIn" required>
             <div class="invalid-feedback" name="linkedIn"  style="width: 100%;">
               Your LinkedIn Profile required.
             </div>
@@ -87,31 +88,35 @@
         </div>
 
         <div style="padding-bottom: 18px;">Position you are applying for<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="position" style="max-width : 450px;" class="form-control"/>
+            <input type="text" id="job_title" name="position" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Major<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="major" style="max-width : 450px;" class="form-control"/>
+            <input type="text" id="Major" name="major" style="max-width : 450px;" class="form-control"/>
         </div>
-        <div style="padding-bottom: 18px;">Type of degree<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="degree" style="max-width : 450px;" class="form-control"/>
-        </div>
+
         <div style="padding-bottom: 18px;">Years of experience in the field<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="experience" style="max-width : 450px;" class="form-control"/>
+            <input type="text" id="experience" name="experience" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Skills<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="skills" style="max-width : 450px;" class="form-control"/>
+            <input type="text" id="Skills" name="skills" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Languages<span style="color: red;"> *</span><br/>
-          <input type="text" id="data_9" name="languages" style="max-width : 450px;" class="form-control"/>
+            <input type="text" id="Languages" name="languages" style="max-width : 450px;" class="form-control"/>
         </div>
         <div style="padding-bottom: 18px;">Resume upload<br/>
-          <input id="data_10" name="data_10" style="max-width : 450px;" type="file" class="form-control"/>
+            <input id="data_10" name="data_10" style="max-width : 450px;" type="file" class="form-control"/>
         </div>
 
         <hr class="mb-4">
         <button class="btn btn-primary btn-lg btn-block" type="submit">Submit Your Details</button>
-      </form>
-    </div>
+        
+        <!-- <div class="btn btn-primary btn-lg btn-block"  id="submit_cv">Submit Your Details</div> -->
+    </form>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
 
-  </body>
+<!-- <script type="module" src="app.js"></script> -->
+
+</body>
 </html>
